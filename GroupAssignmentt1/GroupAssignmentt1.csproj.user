@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Admin Main Window.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Bill Calculating Window.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Bill History Window.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Doctor Registration Window.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Doctor View Window.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="LoginWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="PatientWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Service Register Winodw.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="StartWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserRegistration Window.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="VIEW Window.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Admin Main Window.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Bill Calculating Window.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Bill History Window.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Doctor Registration Window.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Doctor View Window.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="LoginWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="PatientWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Service Register Winodw.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="StartWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserRegistration Window.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="VIEW Window.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

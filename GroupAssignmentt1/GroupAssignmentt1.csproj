@@ -1,0 +1,44 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\26807.jpg" />
+    <None Remove="Images\admin.jpg" />
+    <None Remove="Images\macos-purple-abstract-background-hd-wallpaper-1920x1080-77.jpg" />
+    <None Remove="Images\ultravoilet-holo-wallpaper-3440x1440_15.jpg" />
+    <None Remove="Images\v1016-c-08_1-ksh6mza3.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.0" />
+    <PackageReference Include="MahApps.Metro.IconPacks" Version="4.11.0" />
+    <PackageReference Include="MahApps.Metro.IconPacks.Material" Version="4.11.0" />
+    <PackageReference Include="MaterialDesignThemes" Version="4.9.0" />
+    <PackageReference Include="Microsoft.Data.Sqlite.Core" Version="7.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.9">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.9">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\26807.jpg" />
+    <Resource Include="Images\admin.jpg" />
+    <Resource Include="Images\macos-purple-abstract-background-hd-wallpaper-1920x1080-77.jpg" />
+    <Resource Include="Images\ultravoilet-holo-wallpaper-3440x1440_15.jpg" />
+    <Resource Include="Images\v1016-c-08_1-ksh6mza3.jpg" />
+  </ItemGroup>
+
+</Project>

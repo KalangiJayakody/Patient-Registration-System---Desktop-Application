@@ -1,0 +1,87 @@
+﻿<Window x:Class="GroupAssignmentt1.Admin_Main_Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        xmlns:local="clr-namespace:GroupAssignmentt1"
+        mc:Ignorable="d"
+        Title="Admin_Main_Window" Height="600" Width="1000"
+        >
+    <Window.DataContext>
+        <local:Admin_Main_WindowVM/>
+    </Window.DataContext>
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Images/ultravoilet-holo-wallpaper-3440x1440_15.jpg" Opacity="0.7" />
+           
+        </Grid.Background>
+       
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+
+
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Name" Margin="40 20 0 0" />
+                <TextBlock Text="Age" Margin="100 20 0 0"/>
+                <TextBlock Text="Gender" Margin="10 20 0 0"/>
+                <TextBlock Text="Amount" Margin="100 20 0 0"/>
+            </StackPanel>
+            <ListView  x:Name="listview" Height="600" Background="Transparent" ItemsSource="{Binding Patients ,UpdateSourceTrigger=PropertyChanged}" >
+                
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            
+                            <StackPanel Margin="0 0 0 0" Orientation="Horizontal" >
+                                <TextBlock Text="{Binding Name}"  Margin="40 20 0 0" Width="100" />
+                                <TextBlock Text="{Binding Age}"  Margin="40 20 0 0"  Width="100"/>
+                                <TextBlock Text="{Binding Gender}"  Margin="40 20 0 0"  Width="100"/>
+                                <TextBlock Text="{Binding amount}"  Margin="40 20 0 0"  Width="100"/>
+
+                                <Button  Margin="70 30 0 0"   Command="{Binding DataContext.EditPatientCommand, RelativeSource={RelativeSource AncestorType=ListView}}" CommandParameter="{Binding}" Style="{StaticResource ListDelButton}">
+                                    <icon:PackIconMaterial Kind="Pencil"/>
+                                </Button>
+                                <Button  Margin="40 30 0 0"   Command="{Binding DataContext.DeletePatientCommand, RelativeSource={RelativeSource AncestorType=ListView}}" CommandParameter="{Binding}"  Style="{StaticResource ListDelButton}" >
+                                    <icon:PackIconMaterial Kind="TrashCan"/>
+                                </Button>
+                                <Button  Margin="40 30 0 0"   Command="{Binding DataContext.ReadPatientCommand, RelativeSource={RelativeSource AncestorType=ListView}}" CommandParameter="{Binding}"  Style="{StaticResource ListDelButton}" >
+                                    <icon:PackIconMaterial Kind="Book"/>
+                                </Button>
+                                <Button  Margin="40 30 0 0"   Command="{Binding DataContext.CalculateBillCommand, RelativeSource={RelativeSource AncestorType=ListView}}" CommandParameter="{Binding}"  Style="{StaticResource ListDelButton}">
+                                    <icon:PackIconMaterial Kind="Cash"/>
+                                </Button>
+                            </StackPanel>
+                        </Grid>
+                        
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1">
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Doctor Registration" Command="{Binding DoctorRegisterLogCommand}" Style="{StaticResource mainButton}" Margin="100 0 0 0" Background="Transparent" />
+                <Button Content="Patient Registration" Command="{Binding PatientRegisterLogCommand}" Style="{StaticResource mainButton}" Margin="100 0 0 0" Background="Transparent" />
+                <Button Content="Service Registration" Command="{Binding ServiceRegisterLogCommand}" Style="{StaticResource mainButton}" Margin="100 0 0 0" Background="Transparent"  />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Button Margin="100 50 0 0" Content="Doctors View" Command="{Binding DoctorViewCommand}" Style="{StaticResource mainButton}"  Background="Transparent" />
+                <Button Content="Services View" Command="{Binding ServiceViewCommand}"  Style="{StaticResource mainButton}"  Margin="100 50 0 0" Background="Transparent"/>
+                <Button Content="Bill History" Command="{Binding BillPageCommand}"  Style="{StaticResource mainButton}"  Margin="100 50 0 0" Background="Transparent"/>
+
+            </StackPanel>
+
+            
+            
+
+
+        </StackPanel>
+        
+    </Grid>
+</Window>
